@@ -16,6 +16,8 @@ public class Producto {
     @Column(name = "precio", nullable = false)
     private Double precio;
 
+    private String imagenUrl;
+
     // Constructor por defecto
     public Producto() {
     }
@@ -51,12 +53,21 @@ public class Producto {
         this.precio = precio;
     }
 
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
+    }
+
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+
     @Override
     public String toString() {
         return "Producto{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", precio=" + precio +
+                ", imagen='" + imagenUrl + '\'' +
                 '}';
     }
 }
